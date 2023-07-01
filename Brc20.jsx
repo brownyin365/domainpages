@@ -82,7 +82,8 @@ function Home() {
                       Transfer
                     </button>
                   </div>
-
+                  <br></br>
+                  <br></br>
                   <div class="contentSection">
                     <div class="content" data-number="1">
                       <div>
