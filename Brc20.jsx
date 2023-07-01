@@ -40,6 +40,27 @@ function Home() {
     });
   }
 
+  // Slider counter JS file
+
+  const [sliderValue, setSliderValue] = useState(1);
+
+  const handleSliderChange = (event) => {
+    const value = parseInt(event.target.value);
+    setSliderValue(value);
+  };
+
+  const handleTextInputChange = (event) => {
+    let value = parseInt(event.target.value);
+    if (isNaN(value)) {
+      value = 1;
+    } else if (value < 1) {
+      value = 1;
+    } else if (value > 1000) {
+      value = 1000;
+    }
+    setSliderValue(value);
+  };
+
   return (
     <div className="mb-12">
       <br></br>
@@ -123,20 +144,25 @@ function Home() {
                         </div>
 
                         {/* Increase fees slider,you could also use antd slider plugin for this */}
-                        <div>
-                          <label
-                            for="customRange3"
-                            class="mb-2 text-neutral-700 dark:text-neutral-200 text-left"
-                          >
-                            1-1000
-                          </label>
+                        <div className="flex">
                           <input
                             type="range"
-                            class="transparent bg-gray-300 h-1.5 w-full cursor-pointer appearance-none rounded-lg border-transparent"
-                            min="0"
-                            max="5"
-                            step="0.5"
+                            className="transparent bg-gray-300 h-1.5 w-full mt-5 cursor-pointer appearance-none rounded-lg border-transparent bg-pink-600"
+                            min="1"
+                            max="1000"
+                            step="1"
                             id="customRange3"
+                            value={sliderValue}
+                            onChange={handleSliderChange}
+                          />
+                          <input
+                            type="number"
+                            className="w-16 border-gray-300 rounded-lg mt-2 p-2 focus:outline-none focus:ring-2 focus:ring-pink-600"
+                            min="1"
+                            max="1000"
+                            step="1"
+                            value={sliderValue}
+                            onChange={handleTextInputChange}
                           />
                         </div>
                         {/* End Increase Fees */}
@@ -256,20 +282,25 @@ function Home() {
                         </div>
 
                         {/* Increase fees slider,you could also use antd slider plugin for this */}
-                        <div>
-                          <label
-                            for="customRange3"
-                            class="mb-2 text-neutral-700 dark:text-neutral-200 text-left"
-                          >
-                            1-1000
-                          </label>
+                        <div className="flex">
                           <input
                             type="range"
-                            class="transparent bg-gray-300 h-1.5 w-full cursor-pointer appearance-none rounded-lg border-transparent bg-pink-600"
-                            min="0"
-                            max="5"
-                            step="0.5"
+                            className="transparent bg-gray-300 h-1.5 w-full mt-5 cursor-pointer appearance-none rounded-lg border-transparent bg-pink-600"
+                            min="1"
+                            max="1000"
+                            step="1"
                             id="customRange3"
+                            value={sliderValue}
+                            onChange={handleSliderChange}
+                          />
+                          <input
+                            type="number"
+                            className="w-16 border-gray-300 rounded-lg mt-2 p-2 focus:outline-none focus:ring-2 focus:ring-pink-600"
+                            min="1"
+                            max="1000"
+                            step="1"
+                            value={sliderValue}
+                            onChange={handleTextInputChange}
                           />
                         </div>
                         {/* End Increase Fees */}
