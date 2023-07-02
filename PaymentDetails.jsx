@@ -211,19 +211,19 @@ function Home() {
                         <div class="mt-2 sm:mt-0 sm:col-span-2">
                           <div class="w-full flex justify-center text-white items-center px-6 pt-5 pb-6 border-2 border-gray-300 border-thin rounded-md h-128">
                             <div>
-                              <p className="text-base">
+                              <p className="text-base text-white">
                                 {" "}
                                 Inscribe Fee：1 × 546 sats ~ $0.17
                               </p>
-                              <p className="text-base">
+                              <p className="text-base text-white">
                                 {" "}
                                 Network Fee：1 × 546 sats ~ $0.17
                               </p>
-                              <p className="text-base">
+                              <p className="text-base text-white">
                                 {" "}
                                 Service Fee：1 × 546 sats ~ $0.17
                               </p>
-                              <p className="font-bold text-xl">
+                              <p className="font-bold text-xl text-white">
                                 {" "}
                                 Total Fee：~966700 sats ~ $296.02
                               </p>
